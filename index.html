@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form id="newsletter-form">
+        <h1>ASSINE NOSSA NEWSLETTER:</h1>
+        <label for="name">NOME:</label>
+        <input type="text" id="name" name="name" placeholder="Digite o seu nome" required>
+
+        <label for="contact">CONTATO:</label>
+        <input type="text" id="contact" name="contact" placeholder="Digite fone ou e-mail" required>
+
+        <label for="age-range">ESCOLHA SUA FAIXA DE IDADE NA BARRA ABAIXO</label>
+        <input type="range" id="age-range" name="age-range" min="0" max="100" step="20"
+            oninput="updateAgeOutput(this.value)">
+        <output id="age-output">0</output>
+
+        <p>ASSUNTOS DE INTERESSE:</p>
+        <label for="female">
+            FEMININO
+            <input type="checkbox" id="female" name="interest" value="female">
+        </label>
+        <label for="male">
+            MASCULINO
+            <input type="checkbox" id="male" name="interest" value="male">
+        </label>
+        <label for="sports">
+            ESPORTE
+            <input type="checkbox" id="sports" name="interest" value="sports">
+        </label>
+
+        <label for="comments">COMENTÁRIO:</label>
+        <textarea id="comments" name="comments" placeholder="Digite o texto aqui"></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
