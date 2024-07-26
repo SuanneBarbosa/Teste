@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -9,38 +9,57 @@
 </head>
 
 <body>
+    <h1>ASSINE NOSSA NEWSLETTER</h1>
+    <hr>
     <form id="newsletter-form">
-        <h1>ASSINE NOSSA NEWSLETTER:</h1>
-        <label for="name">NOME:</label>
+        <label for="name">Nome:</label>
         <input type="text" id="name" name="name" placeholder="Digite o seu nome" required>
-
-        <label for="contact">CONTATO:</label>
+        
+        <label for="contact">Contato:</label>
         <input type="text" id="contact" name="contact" placeholder="Digite fone ou e-mail" required>
+        
+        <label for="age-range">Escolha sua idade na barra abaixo:</label>
+        <input type="range" id="age-range" name="age-range" min="0" max="100" oninput="updateAgeOutput(this.value)">
+        <div class="age-labels">
+            <span>0</span><span>20</span><span>40</span><span>60</span><span>80</span><span>100</span>
+        </div>
+        <div id="age-range-output"></div>
 
-        <label for="age-range">ESCOLHA SUA FAIXA DE IDADE NA BARRA ABAIXO</label>
-        <input type="range" id="age-range" name="age-range" min="0" max="100" step="20"
-            oninput="updateAgeOutput(this.value)">
-        <output id="age-output">0</output>
-
-        <p>ASSUNTOS DE INTERESSE:</p>
+        <label for="assuntos">Assuntos de Interesse:</label>
         <label for="female">
-            FEMININO
             <input type="checkbox" id="female" name="interest" value="female">
+            Feminino
         </label>
         <label for="male">
-            MASCULINO
             <input type="checkbox" id="male" name="interest" value="male">
+            Masculino
         </label>
         <label for="sports">
-            ESPORTE
             <input type="checkbox" id="sports" name="interest" value="sports">
+            Esporte
         </label>
 
-        <label for="comments">COMENTÁRIO:</label>
+        <label for="comments">Comentário:</label>
         <textarea id="comments" name="comments" placeholder="Digite o texto aqui"></textarea>
-
+        
         <button type="submit">Enviar</button>
     </form>
+    <!-- Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Formulário Enviado!</h2>
+            <h3>Informações Cadastradas:</h3>
+            <ul>
+                <li><strong>Nome: </strong><span id="modal-name"></span></li>
+                <li><strong>Contato: </strong><span id="modal-contact"></span></li>
+                <li><strong>Faixa de idade: </strong><span id="modal-age-range"></span></li>
+                <li><strong>Interesse(s): </strong><span id="modal-interests"></span></li>
+                <li><strong>Comentários: </strong><span id="modal-comments"></span></li>
+            </ul>
+            <button id="modal-ok-button" class="btn">OK</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 
 </body>

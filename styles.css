@@ -1,56 +1,163 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #4E97D1; 
+    color: #333; 
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+
+}
+
+h1 {
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    width: 600px;
+    background: white;
+    margin-bottom: 20px;
 }
 
 form {
-    width: 300px;
-    margin: 0 auto;
+    background-color: #fff;
     padding: 20px;
-    border: 2px solid red;
     border-radius: 10px;
-    background-color: white;
-    color: red;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #4E97D1;
+    text-align: left;
+    margin: 0px;
+    width: 30%;
 }
 
 label {
     display: block;
     margin-top: 10px;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
 input[type="text"], 
-input[type="range"], 
 textarea {
-    width: 100%;
-    padding: 5px;
+    width: 95%;
+    padding: 10px;
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
+
 input[type="checkbox"] {
     margin-right: 5px;
+}
+ 
+input[type="range"] {
+    width: calc(100% - 24px); 
+    margin: 0 12px; 
+    padding: 0;
+    margin-top: 10px;
+}
+
+.age-labels {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px; 
+    margin-top: 2px;
+    color: black;
+}
+
+#age-range-output {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #4E97D1;
 }
 
 output {
     display: block;
     font-weight: bold;
     text-align: center;
-    margin-top: 5px;
-    margin-bottom: 10px;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: red;
+    width: 100%; 
+    padding: 15px;
+    background-color: #333;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    text-align: center;
 }
 
 button:hover {
-    background-color: darkred;
+    background-color: #4E97D1;
+}
+
+/* Modal Confirmação de Envio */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: auto; 
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+h2{
+    text-align: center;
+    color: #333;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn {
+    display: block;
+    width: 100px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    margin: 20px auto 0 auto;
+}
+
+.btn:hover {
+    background-color: #4E97D1;
 }
