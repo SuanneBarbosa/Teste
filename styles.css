@@ -161,3 +161,34 @@ h2{
 .btn:hover {
     background-color: #4E97D1;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    hr {
+        width: 90%;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .btn {
+        width: 80px;
+        font-size: 14px;
+    }
+}
